@@ -1,6 +1,4 @@
-import java.util.HashSet;
-import java.util.PriorityQueue;
-import java.util.Set;
+import java.util.*;
 
 public class Astarr {
     private static final int V = 24;
@@ -23,9 +21,14 @@ public class Astarr {
         @Override
         public int compareTo(Node other) {
             // Compare nodes based on total cost (distance + heuristic)
-            return Integer.compare(this.distance, other.distance);
+            return Integer.compare(this.distance + calculateHeuristic(), other.distance + other.calculateHeuristic());
         }
 
+        private int calculateHeuristic() {
+            // Your heuristic calculation goes here
+            // You may want to use a combination of bandwidth, delay, and reliability
+            return 0; // Replace with your heuristic calculation
+        }
     }
 
     private void printSolution(int[] dist, int[] bandwidth, int[] delay, double[] reliability) {
@@ -206,4 +209,4 @@ double[][] reliability = {
         Astarr Astarr = new Astarr();
         Astarr.aStar(graph, bandwidth, delay, reliability, sourceVertex);
     }
-} 
+}
