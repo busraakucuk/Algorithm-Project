@@ -1,5 +1,4 @@
 public class DijkstraaAlgorithm {
-	
     private static final int V = 24;
 
     private void printSolution(int[] dist, int[] bandwidth, int[] delay, double[] reliability) {
@@ -63,6 +62,7 @@ public class DijkstraaAlgorithm {
     }
 
     public static void main(String[] args) {
+        // Your graph, bandwidth, delay, and reliability matrices remain unchanged
         int[][] graph = new int[][]{{0, 3, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         {3, 0, 3, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         {0, 3, 0, 5, 2, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
